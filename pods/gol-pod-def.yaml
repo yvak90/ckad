@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: null
+  labels:
+    run: gol-pod
+  name: gol-pod
+spec:
+  containers:
+  - image: yvak90/gameoflife:3.0
+    name: nginx-pod
+    ports:
+    - containerPort: 8080
+    resources: {}
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
+status: {}
