@@ -1,0 +1,12 @@
+apiVersion: v1
+data:
+  db: mysql
+  mysql-port: "3306"
+  tier: db
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2021-05-13T02:39:28Z"
+  name: db-config
+  namespace: default
+  resourceVersion: "16482"
+  uid: f78c3675-756a-475d-9b54-c8609251e23e

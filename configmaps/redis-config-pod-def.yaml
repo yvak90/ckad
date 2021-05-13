@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: null
+  labels:
+    run: redis-config-pod
+  name: redis-config-pod
+spec:
+  containers:
+  - image: redis
+    name: redis-config-pod
+    env:
+     - name: testEnv
+       valueFrom:
+         configMapKeyRef:
+           key: tier
+           name: db-config       
+    resources: {}
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
+status: {}
