@@ -10,6 +10,7 @@ spec:
   - port: 30095
     protocol: TCP
     targetPort: 30095
+    nodePort: 30095
   selector:
     app: drupal
   type: NodePort
